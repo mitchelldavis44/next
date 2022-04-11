@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: guestbook-virtual-host-ingress
-  namespace: default
+  name: nextcloud-virtual-host-ingress
+  namespace: nextcloud
   annotations:
     #kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
@@ -10,13 +10,13 @@ metadata:
     nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
 spec:
   rules:
-  - host: argoguest.me
+  - host: nextcloud.me
     http:
       paths:
       - pathType: Prefix
         path: "/"
         backend:
           service:
-            name: guestbook-ui
+            name: nextcloud
             port:
-              number: 80
+              number: 8080
