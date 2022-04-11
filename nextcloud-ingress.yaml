@@ -19,4 +19,4 @@ spec:
           service:
             name: nextcloud
             port:
-              number: 8080
+              number: 80
