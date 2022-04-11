@@ -10,7 +10,7 @@ metadata:
     nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
 spec:
   rules:
-  - host: nextcloud.me
+  - host: nextcloud.local
     http:
       paths:
       - pathType: Prefix
