@@ -17,4 +17,4 @@ spec:
         - image: nextcloud:latest
           name: nextcloud
           ports:
-            - containerPort: 80
+            - containerPort: 8080
